@@ -16,7 +16,7 @@ string? UserInput(string text)
 }
 class PasswordValidator
 {
-    //I probably should of just used a constructor, as it would saved me a line or two on my Main method, but this worked.
+    //I probably should of just used a constructor, as it would saved me a line or two on my Main method, but this worked. 
     private string? Password { get;  set; }
 
     private bool CheckPasswordLength()
