@@ -1,9 +1,13 @@
-﻿while (true) 
+﻿Main();
+void Main()
 {
-    string? password = UserInput("Please enter a valid password (upper case, lower case, and one number): ");
-    PasswordValidator passwordChecker = new PasswordValidator();
-    passwordChecker.SetPassword(password);
-    passwordChecker.ValdiatePassword();
+    while (true)
+    {
+        string? password = UserInput("Please enter a valid password (upper case, lower case, and one number): ");
+        PasswordValidator passwordChecker = new PasswordValidator();
+        passwordChecker.SetPassword(password);
+        passwordChecker.ValdiatePassword();
+    }
 }
 string? UserInput(string text)
 {
@@ -12,6 +16,7 @@ string? UserInput(string text)
 }
 class PasswordValidator
 {
+    //I probably should of just used a constructor, as it would saved me a line or two on my Main method, but this worked.
     private string? Password { get;  set; }
 
     private bool CheckPasswordLength()
